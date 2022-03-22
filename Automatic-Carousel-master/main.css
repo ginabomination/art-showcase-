@@ -24,8 +24,7 @@ body{
 }
 
 .carousel-container{
-    max-width: 980px;
-    width: 95%;
+    width: 100%;
 }
 
 .carousel{
@@ -43,6 +42,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit:cover;
 }
 
 /*Modifying the arrow (chevron)*/
