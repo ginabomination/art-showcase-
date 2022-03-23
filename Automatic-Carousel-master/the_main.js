@@ -1,6 +1,16 @@
 let left_arrow = document.querySelector("#carousel-1 .left-arrow");
 let right_arrow = document.querySelector("#carousel-1 .right-arrow");
 
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+
 let screen_store = document.querySelectorAll("#carousel-1 .carousel-screen"); //nodelist that cantain all the pictures
 let num_screen = screen_store.length; //to get the screen acount from the carousel
 //list of all circles
@@ -258,3 +268,18 @@ if(scroll_time){ //If there's the auto-scroll attribute in the html script
     })
 }
 
+var mini = true;
+
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "85px";
+                document.getElementById("main").style.marginLeft = "85px";
+                this.mini = true;
+            }
+        }
