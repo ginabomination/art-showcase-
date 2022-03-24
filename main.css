@@ -80,21 +80,6 @@
             animation-delay: calc(3s * 2);
   }
   
-  .carousel__item-head {
-    border-radius: 50%;
-    background-color: #d7f7fc;
-    width: 90px;
-    height: 90px;
-    padding: 14px;
-    position: relative;
-    margin-right: -45px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-  }
-  
   .carousel__item-body {
     width: 100%;
     background-color: #fff;
