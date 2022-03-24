@@ -12,12 +12,12 @@
     background: linear-gradient(60deg, #420285, #08BDBD);
     height: 100%;
     width: 100%;
-    display: flex;
+    display: fixed;
     justify-content: center;
   }
   
   .carousel {
-    position: fixed;
+    position: relative;
     width: 40%;
     display: flex;
     flex-direction: column;
