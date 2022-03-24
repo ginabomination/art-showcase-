@@ -92,32 +92,26 @@
     0% {
       transform: translateY(100%) scale(0.5);
       opacity: 0;
-      visibility: hidden;
     }
     3%, 11.1111111111% {
       transform: translateY(100%) scale(0.7);
       opacity: 0.4;
-      visibility: visible;
     }
     14.1111111111%, 22.2222222222% {
       transform: translateY(0) scale(1);
       opacity: 1;
-      visibility: visible;
     }
     25.2222222222%, 33.3333333333% {
       transform: translateY(-100%) scale(0.7);
       opacity: 0.4;
-      visibility: visible;
     }
     36.3333333333% {
       transform: translateY(-100%) scale(0.5);
       opacity: 0;
-      visibility: visible;
     }
     100% {
       transform: translateY(-100%) scale(0.5);
       opacity: 0;
-      visibility: hidden;
     }
   }
   
