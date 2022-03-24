@@ -80,6 +80,21 @@
             animation-delay: calc(3s * 2);
   }
   
+  .carousel__item-head {
+    border-radius: 50%;
+    background-color: #d7f7fc;
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+  
   .carousel__item-body {
     width: 100%;
     background-color: #fff;
@@ -101,17 +116,17 @@
     }
     3%, 11.1111111111% {
       transform: translateY(100%) scale(0.7);
-      opacity: 0.4;
+      opacity: 0;
       visibility: visible;
     }
     14.1111111111%, 22.2222222222% {
       transform: translateY(0) scale(1);
-      opacity: 1;
+      opacity: 0;
       visibility: visible;
     }
     25.2222222222%, 33.3333333333% {
       transform: translateY(-100%) scale(0.7);
-      opacity: 0.4;
+      opacity: 0;
       visibility: visible;
     }
     36.3333333333% {
@@ -134,17 +149,17 @@
     }
     3%, 11.1111111111% {
       transform: translateY(100%) scale(0.7);
-      opacity: 0.4;
+      opacity: 0;
       visibility: visible;
     }
     14.1111111111%, 22.2222222222% {
       transform: translateY(0) scale(1);
-      opacity: 1;
+      opacity: 0;
       visibility: visible;
     }
     25.2222222222%, 33.3333333333% {
       transform: translateY(-100%) scale(0.7);
-      opacity: 0.4;
+      opacity: 0;
       visibility: visible;
     }
     36.3333333333% {
