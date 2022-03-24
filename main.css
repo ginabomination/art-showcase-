@@ -9,10 +9,9 @@
   }
   
   .wrapper {
-    background: linear-gradient(60deg, #420285, #08BDBD);
     height: 100%;
     width: 100%;
-    display: fixed;
+    display: flex;
     justify-content: center;
   }
   
@@ -29,8 +28,6 @@
     width: 100%;
     padding: 0 12px;
     opacity: 0;
-    filter: drop-shadow(0 2px 2px #555);
-    will-change: transform, opacity;
     -webkit-animation: carousel-animate-vertical 27s linear infinite;
             animation: carousel-animate-vertical 27s linear infinite;
   }
@@ -82,12 +79,6 @@
   
   .carousel__item-body {
     width: 100%;
-  }
-  
-  .title {
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-top: 10px;
   }
   
   @-webkit-keyframes carousel-animate-vertical {
