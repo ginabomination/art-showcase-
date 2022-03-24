@@ -24,8 +24,6 @@
   }
   
   .carousel__item {
-    display: flex;
-    align-items: center;
     width: 100%;
     padding: 0 12px;
     opacity: 0;
