@@ -14,18 +14,20 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .carousel {
-    position: absolute;
-    width: 40%;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
   }
   
   .carousel__item {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: relitive;
     padding: 0 12px;
     opacity: 0;
     -webkit-animation: carousel-animate-vertical 27s linear infinite;
@@ -70,11 +72,6 @@
   .carousel__item:nth-child(8) {
     -webkit-animation-delay: calc(3s * 6);
             animation-delay: calc(3s * 6);
-  }
-  
-  .carousel__item:last-child {
-    -webkit-animation-delay: calc(3s * 2);
-            animation-delay: calc(3s * 2);
   }
   
   .carousel__item-body {
