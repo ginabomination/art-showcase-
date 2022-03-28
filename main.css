@@ -16,7 +16,7 @@
   }
   
   .carousel {
-    position: absolute;
+    position: relative;
     width: 100%;
     max-width: 500px;
     display: flex;
@@ -82,7 +82,7 @@
   }
   
   .carousel__item-body {
-    width: 100%;
+    width: 50%;
   }
   
   .title {
