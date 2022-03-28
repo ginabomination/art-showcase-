@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css">
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="main.css">
+  <script src = "main.js"></script>
+
+  <style>
       .flex-container {
         display: flex;
         flex-wrap: nowrap;
@@ -20,11 +22,7 @@
         line-height: 75px;
         font-size: 30px;
       }
-      </style>
-</head>
-<script src = "main.js"></script>
-
-<style>
+      
     body {
         font-family: "Lato", sans-serif;
     }
@@ -92,22 +90,21 @@
 </head>
 
 <body>
-  <h1>Flexible Boxes</h1>
-  
+
 <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-    <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
-    <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
-    <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
-    <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
-    <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
-    <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
+  <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
+  <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
+  <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
+  <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
+  <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
+  <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
 </div>
 
 <div id="main">
-    <p>xsndhbasdjhbajsbdjh</p>
   <body>
 
     <div class="flex-container">
+      <p>xsndhbasdjhbajsbdjh</p>
       <div class='wrapper'>
         <div class='carousel'>
           
@@ -168,29 +165,27 @@
         </div>
       </div>   
     </div>    
-       
+
   </body>
 </div>
 
-
 <script>
-    var mini = true;
+  var mini = true;
 
-    function toggleSidebar() {
-        if (mini) {
-            console.log("opening sidebar");
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            this.mini = false;
-        } else {
-            console.log("closing sidebar");
-            document.getElementById("mySidebar").style.width = "85px";
-            document.getElementById("main").style.marginLeft = "85px";
-            this.mini = true;
-        }
+  function toggleSidebar() {
+    if (mini) {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      this.mini = false;
+    } 
+
+    else {
+      document.getElementById("mySidebar").style.width = "85px";
+      document.getElementById("main").style.marginLeft = "85px";
+      this.mini = true;
     }
+  }
 </script>
 
 </body>
-
 </html>
