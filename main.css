@@ -17,10 +17,9 @@
   
   .carousel {
     position: relative;
-    width: 100%;
-    max-width: 500px;
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     flex-direction: column;
   }
   
