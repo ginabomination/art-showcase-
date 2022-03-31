@@ -7,6 +7,24 @@
     font-weight: 400;
     height: 100vh;
   }
+
+  .cell {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+  
+    padding: 10px;
+    margin: 10px;
+  
+    background-color: green;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+  }
   
   .wrapper {
     height: 100%;
