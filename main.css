@@ -7,6 +7,34 @@
     font-weight: 400;
     height: 100vh;
   }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+    align-self: left;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100%;
+    object-fit: contain;
+    margin: 10px;
+    text-align: center;
+    font-size: 11px;
+    
+  }
+
+  .flex-container > div2 {
+    background-color: #f1f1f1;
+    width: 100%;
+    object-fit: contain;
+    margin: 10px;
+    text-align: center;
+    font-size: 11px;
+    
+  }
+
   .row {
     display: -webkit-box;
     display: -moz-box;
@@ -29,22 +57,6 @@
     box-align: center;
     align-items: center;
   
-    background-color: red;
-  
-  }
-  
-  .cell {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    flex: 1 1 auto;
-  
-    padding: 10px;
-    margin: 10px;
-  
-    background-color: green;
-    text-align: center;
   }
   
   img {
