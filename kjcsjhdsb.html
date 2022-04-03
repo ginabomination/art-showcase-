@@ -1,0 +1,235 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+</head>
+<body>
+    <div class="container">
+  
+        <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+            <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
+            <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
+            <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
+            <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
+            <a href="#"><span></span><i class="material-icons">filter_vintage</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Printmaking</span></a><br>
+            <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
+            <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Digital Prints</span></a><br>
+            <a href="#"><span></span><i class="material-icons">collections</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
+          </div>
+  
+        <div class="nav-right">
+          <p>name</p>
+        </div>
+      </div>
+  
+      <div class="portfolio-main-card">
+        <div class="my-image">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhyperallergic.com%2Fwp-content%2Fuploads%2F2016%2F01%2FCat_023-FF.jpg&f=1&nofb=1" alt="" />
+  
+        </div>
+        <div class="my-text">
+          <div class="my-text-p">
+            <p>Welcome to my portfolio</p>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="projects">
+        <p>PROJECTS</p>
+      </div>
+      <div class="portfolio-cards-wrapper">
+        <div class="card">
+          <h4>machine learning</h4>
+          <p class="card-details">looking for details</p>
+        </div>
+        <div class="card">
+          <h4>computer vision</h4>
+          <p class="card-details">wow</p>
+        </div>
+        <div class="card">
+          <h4>python</h4>
+          <p class="card-details">My python projects are as follows</p>
+        </div>
+        <div class="card">
+          <h4>final year project</h4>
+          <p class="card-details">My final year project</p>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+
+    <style>
+       * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(92, 87, 87);
+  color: white;
+  background-image: repeating-linear-gradient(
+    33deg,
+    rgb(247, 204, 36) 0% 7%,
+    rgb(233, 192, 30) 7% 9%
+  );
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 2%;
+  border-radius: 15px;
+  background-color: rgb(75, 75, 74);
+  box-shadow: 0px 0px 15px 2px rgb(41, 40, 40);
+  border: 2px solid rgb(0, 255, 0);
+}
+
+.sidebar {
+        height: 100%;
+        width: 85px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+    
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    .material-icons,
+    .icon-text {
+        vertical-align: middle;
+    }
+    
+    .material-icons {
+        padding-bottom: 3px;
+    }
+    
+
+.portfolio-main-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid yellow;
+  background-color: rgb(134, 107, 134);
+  width: 100%;
+  height: 50vh;
+}
+
+.my-image {
+  flex: 1;
+  height: 100%;
+}
+.my-image img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.my-text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.my-text-p {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.portfolio-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  margin: 30px 30px 60px 30px;
+}
+
+.card {
+  border-radius: 3px;
+  padding: 0.5rem;
+  background-color: rgb(66, 62, 62);
+  color: #feda6a;
+  box-shadow: 0px 0px 16px rgb(0, 0, 0);
+  margin: 20px 20px 10px 20px;
+}
+
+.projects {
+  margin: 20px;
+}
+
+.projects > p {
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .container {
+    background-color: rgb(133, 115, 115);
+    grid-template-columns: 95%;
+  }
+
+  .portfolio-main-card {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+
+  .portfolio-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 370px) {
+  .container {
+    grid-template-columns: 100%;
+    background-color: rgb(0, 255, 0);
+    margin: 0%;
+    border-radius: 0;
+  }
+} 
+    </style>
+    <script>
+        var mini = true;
+      
+        function toggleSidebar() {
+          if (mini) {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            this.mini = false;
+          } 
+      
+          else {
+            document.getElementById("mySidebar").style.width = "85px";
+            document.getElementById("main").style.marginLeft = "85px";
+            this.mini = true;
+          }
+        }
+      </script>
+  
+  </body>
