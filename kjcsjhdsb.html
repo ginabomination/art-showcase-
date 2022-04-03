@@ -8,11 +8,8 @@
     box-sizing: border-box; 
   }
   body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: row;
-    margin: 0;
-  }
+        font-family: "Lato", sans-serif;
+    }
   .col-1 {
     background: #D7E8D4;
     flex: 1;
@@ -40,7 +37,7 @@
 
   .sidebar {
         height: 100%;
-        width: 85px;
+        width: 80px;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -99,7 +96,6 @@
     }
 </style>
 <body>
-<div  id="main">
   <nav class="col-1">
     <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
       <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
@@ -114,6 +110,7 @@
   </nav>
 
   <div class="col-2">
+    <div  id="main">
     <main class="content">
     <article>Article</article>
     <aside>Aside</aside>
