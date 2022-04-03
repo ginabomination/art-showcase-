@@ -103,8 +103,8 @@
         width: 100%;
         display: flex;
         justify-content: right;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: row;
+        object-fit: contain;
       }
       
       .carousel__item {
