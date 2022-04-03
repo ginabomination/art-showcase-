@@ -5,6 +5,7 @@
         font-family: "Lato", sans-serif;
     }
 
+/*flexbox/layout catorising*/
   .col-1 {
     background: #D7E8D4;
     flex: 1;
@@ -31,7 +32,7 @@
   }
 
 
-
+/*side bar below*/
   .sidebar {
         height: 100%;
         width: 80px;
@@ -66,7 +67,7 @@
         font-size: 36px;
         margin-left: 50px;
     }
-    
+/*icons below*/  
     .material-icons,
     .icon-text {
         vertical-align: middle;
@@ -76,6 +77,7 @@
         padding-bottom: 3px;
     }
 
+/*side bar layout management*/
     #main {
         transition: margin-left .5s;
         padding: 16px;
