@@ -268,8 +268,6 @@
         box-align: center;
         align-items: center;
       
-        background-color: red;
-      
       }
       
       .cell {
@@ -279,11 +277,10 @@
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
       
-        padding: 10px;
-        margin: 10px;
+        padding: 0px;
+        margin: 0px;
       
         background-color: green;
-        border: 1px solid red;
         text-align: center;
       }
       
