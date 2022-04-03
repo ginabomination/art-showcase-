@@ -246,7 +246,7 @@
 
 
 
-      .column {
+      .col-3 {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -257,6 +257,7 @@
         -moz-box-orient: horizontal;
         box-orient: horizontal;
         flex-direction: column;
+        flex-direction: row;
       
         -webkit-box-pack: center;
         -moz-box-pack: center;
