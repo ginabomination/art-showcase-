@@ -10,6 +10,7 @@
   body {
         font-family: "Lato", sans-serif;
     }
+
   .col-1 {
     background: #D7E8D4;
     flex: 1;
@@ -26,11 +27,13 @@
   }
   .content > article {
     flex: 3;
-    min-height: 60vh;
+    min-height: 60vxh;
+    max-width: 50%;
   }
   .content > aside {
     background: beige;
     flex: 1;
+    max-width: 50%;
   }
 
 
@@ -84,8 +87,7 @@
         padding: 16px;
         margin-left: 100px;
     }
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    
+   
     @media screen and (max-height: 450px) {
         .sidebar {
             padding-top: 15px;
