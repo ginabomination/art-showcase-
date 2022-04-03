@@ -7,74 +7,10 @@
     font-weight: 400;
     height: 100vh;
   }
-
-  .flex-container {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: DodgerBlue;
-    align-self: left;
-  }
-  
-  .flex-container > div {
-    background-color: #f1f1f1;
-    width: 100%;
-    object-fit: contain;
-    margin: 10px;
-    text-align: center;
-    font-size: 11px;
-    
-  }
-
-  .flex-container > div2 {
-    background-color: #f1f1f1;
-    width: 100%;
-    object-fit: contain;
-    margin: 10px;
-    text-align: center;
-    font-size: 11px;
-    
-  }
-
-  .row {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-  
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    flex-direction: row;
-  
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    justify-content: center;
-  
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    box-align: center;
-    align-items: center;
-    width: 100%;
-  
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  .wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    object-fit: contain;
-  }
   
   .carousel {
     position: fixed;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: right;
     flex-direction: column;
