@@ -5,12 +5,6 @@
         font-family: "Lato", sans-serif;
     }
 
-  img {
-     height: 100%;
-  width: fit-content;
-  align-self: right;
-  }
-
 /*flexbox/layout catorising*/
   .col-1 {
     background: #D7E8D4;
@@ -252,7 +246,7 @@
 
 
 
-      .col-3 {
+      .row {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
