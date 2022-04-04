@@ -109,12 +109,10 @@
       
       .carousel__item {
         display: flex;
-        align-items: center;
-        position: absolute;
+        align-items: right;
         object-fit: contain;
+        position: absolute;
         width: 100%;
-        opacity: 0;
-        filter: drop-shadow(0 2px 2px #555);
         will-change: transform, opacity;
         -webkit-animation: carousel-animate-vertical 27s linear infinite;
                 animation: carousel-animate-vertical 27s linear infinite;
@@ -163,16 +161,6 @@
       .carousel__item:last-child {
         -webkit-animation-delay: calc(-3s * 2);
                 animation-delay: calc(-3s * 2);
-      }
-      
-      .carousel__item-body {
-        width: 50%;
-      }
-      
-      .title {
-        text-transform: uppercase;
-        font-size: 20px;
-        margin-top: 10px;
       }
       
       @-webkit-keyframes carousel-animate-vertical {
@@ -268,21 +256,6 @@
         -moz-box-align: center;
         box-align: center;
         align-items: center;
-      
-      }
-      
-      .cell {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        box-flex: 1;
-        -webkit-flex: 1 1 auto;
-        flex: 1 1 auto;
-      
-        padding: 0px;
-        margin: 0px;
-      
-        background-color: green;
-        text-align: center;
       }
       
       img {
