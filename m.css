@@ -105,7 +105,6 @@
 
     .carousel {
         position: fixed;
-        width: fit-content;
         display: flex;
         justify-content: right;
         flex-direction: row;
@@ -117,7 +116,7 @@
         align-items: center;
         position: absolute;
         object-fit: contain;
-        width: 100%;
+        width: fit-content;
         opacity: 0;
         filter: drop-shadow(0 2px 2px #555);
         will-change: transform, opacity;
