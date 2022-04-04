@@ -1,13 +1,13 @@
 // For a real auction, set this to false
-let demoAuction = false;
+let demoAuction = true;
 // For a real auction, populate these arrays
-let primaryImages = ["logo.png"];
-let titles = ["test"];
+let primaryImages = [];
+let titles = [];
 let subtitles = [];
 let details = [];
 let secondaryImages = [];
 let startingPrices = [55, 60, 20, 0, 4, 0, 99, 0, 12, 6, 3, 7];
-let endTimes = []; // Make sure to fix these to UTC time so they don't change with the users timezone
+let endTimes = []; // Make sure to fix these to UTC time so they don't change with the users timezone timezone
 
 // Random auction information
 function generateRandomAuctions() {
