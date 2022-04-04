@@ -5,6 +5,11 @@
         font-family: "Lato", sans-serif;
     }
 
+  img {
+    height: 100%;
+    width: fit-content;
+  }
+
 /*flexbox/layout catorising*/
   .col-1 {
     background: #D7E8D4;
@@ -100,7 +105,7 @@
 
     .carousel {
         position: fixed;
-        width: 100%;
+        width: fit-content;
         display: flex;
         justify-content: right;
         flex-direction: row;
