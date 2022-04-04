@@ -9,7 +9,7 @@
   .col-1 {
     background: #D7E8D4;
     flex: 1;
-    max-width: 8%;
+    max-width: 6%;
   }
   .col-2 {
     display: flex;
@@ -255,7 +255,8 @@
         -webkit-box-align: center;
         -moz-box-align: center;
         box-align: center;
-        align-items: center;
+        align-items: right;
+        object-fit: contain;
       }
       
       img {
