@@ -13,7 +13,12 @@
         </li>
         <li class="item button"><a href="#">Log In</a></li>
         <li class="item button secondary"><a href="#">Sign Up</a></li>
-        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        <li><div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div></li>
+        <li class="menu-btn"></li>
     </ul>
 </nav>
 
@@ -68,10 +73,72 @@ a {
 .menu li.subitem a {
     padding: 15px;
 }
-.toggle {
-    order: 1;
-    font-size: 20px;
-}
+
+
+/* Styling the menu button */
+.menu-btn {
+            position: absolute;
+            z-index: 3;
+            cursor: pointer;
+        }
+     
+        /* Styling the hamburger lines */
+        .menu-btn .btn-line {
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background: black;
+            transition: all 0.5s ease-out;
+        }
+     
+        /* Adding transform to the X */
+        .menu-btn.close {
+            transform: rotate(180deg);
+        }
+     
+        /* Styling the three lines
+            to make it an X */
+        .menu-btn.close .btn-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+     
+        .menu-btn.close .btn-line:nth-child(2) {
+            opacity: 0;
+        }
+     
+        .menu-btn.close .btn-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+     
+        /* Styling the position of the menu icon */
+        .menu {
+            visibility: hidden;
+        }
+     
+        .menu.show {
+            visibility: visible;
+        }
+     
+        /* Adding a transition delay to the
+           4 items in the navigation menu */
+        .nav-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+     
+        .nav-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+     
+        .nav-item:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+     
+        .nav-item:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+
+
 .item.button {
     order: 2;
 }
@@ -191,26 +258,50 @@ a {
 }
 </style>
 <script>
-const toggle = document.querySelector(".toggle");
-const menu = document.querySelector(".menu");
+// select dom items
+const menuBtn =
+        document.querySelector(".menu-btn");
  
-/* Toggle mobile menu */
-function toggleMenu() {
-    if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-         
-        // adds the menu (hamburger) icon
-        toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
-    } else {
-        menu.classList.add("active");
-         
-        // adds the close (x) icon
-        toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
+    const menu =
+        document.querySelector(".menu");
+ 
+    const menuNav =
+        document.querySelector(".menu-nav");
+ 
+    const menuBranding =
+        document.querySelector(".menu-branding");
+ 
+    const navItems =
+        document.querySelectorAll(".nav-item");
+ 
+    // Set the initial state of the menu
+    let showMenu = false;
+ 
+    menuBtn.addEventListener("click", toggleMenu);
+ 
+    function toggleMenu() {
+        if (!showMenu) {
+            menuBtn.classList.add("close");
+            menu.classList.add("show");
+            menuNav.classList.add("show");
+            menuBranding.classList.add("show");
+            navItems.forEach((item) =>
+                item.classList.add("show"));
+ 
+            // Reset the menu state
+            showMenu = true;
+        } else {
+            menuBtn.classList.remove("close");
+            menu.classList.remove("show");
+            menuNav.classList.remove("show");
+            menuBranding.classList.remove("show");
+            navItems.forEach((item) =>
+                item.classList.remove("show"));
+ 
+            // Reset the menu state
+            showMenu = false;
+        }
     }
-}
- 
-/* Event Listener */
-toggle.addEventListener("click", toggleMenu, false);
 
 
 
