@@ -8,17 +8,16 @@
 </div>
 
 <div id="page">
-  <div id="sideBar">
-    <div>
-      box 1
-    </div>
-    <div>
-      box 2
-    </div>
-  </div>
-  <div id="content">
-    content
-  </div>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
+        <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
+        <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
+        <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
+        <a href="#"><span></span><i class="material-icons">filter_vintage</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Printmaking</span></a><br>
+        <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
+        <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Digital Prints</span></a><br>
+        <a href="#"><span></span><i class="material-icons">collections</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
+      </div>
 </div>
 
 <style>
@@ -62,7 +61,7 @@ html {
     /* enable grow, disable shrink */
   }
 
-  .sideBar {
+  .sidebar {
         height: 100%;
         width: 85px;
         position: fixed;
@@ -76,7 +75,7 @@ html {
         white-space: nowrap;
     }
     
-    .sideBar a {
+    .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
@@ -85,11 +84,11 @@ html {
         transition: 0.3s;
     }
     
-    .sideBar a:hover {
+    .sidebar a:hover {
         color: #f1f1f1;
     }
     
-    .sideBar .closebtn {
+    .sidebar .closebtn {
         position: absolute;
         top: 0;
         right: 25px;
@@ -114,10 +113,10 @@ html {
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     
     @media screen and (max-height: 450px) {
-        .sideBar {
+        .sidebar {
             padding-top: 15px;
         }
-        .sideBar a {
+        .sidebar a {
             font-size: 18px;
         }
     }
