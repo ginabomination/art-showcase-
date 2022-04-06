@@ -150,3 +150,10 @@
     }
   }
   
+
+  .content > aside {
+    background: beige;
+    flex: 1;
+    max-width: 50%;
+    object-fit: contain;
+  }
