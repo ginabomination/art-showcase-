@@ -1,159 +1,171 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    height: 100vh;
-  }
-  
-  .carousel {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-  }
-  
-  .carousel__item {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    object-fit: contain;
-    width: 100%;
-    opacity: 0;
-    filter: drop-shadow(0 2px 2px #555);
-    will-change: transform, opacity;
-    -webkit-animation: carousel-animate-vertical 27s linear infinite;
-            animation: carousel-animate-vertical 27s linear infinite;
-  }
-  
-  .carousel__item:nth-child(1) {
-    -webkit-animation-delay: calc(3s * -1);
-            animation-delay: calc(3s * -1);
-  }
-  
-  .carousel__item:nth-child(2) {
-    -webkit-animation-delay: calc(3s * 0);
-            animation-delay: calc(3s * 0);
-  }
-  
-  .carousel__item:nth-child(3) {
-    -webkit-animation-delay: calc(3s * 1);
-            animation-delay: calc(3s * 1);
-  }
-  
-  .carousel__item:nth-child(4) {
-    -webkit-animation-delay: calc(3s * 2);
-            animation-delay: calc(3s * 2);
-  }
-  
-  .carousel__item:nth-child(5) {
-    -webkit-animation-delay: calc(3s * 3);
-            animation-delay: calc(3s * 3);
-  }
-  
-  .carousel__item:nth-child(6) {
-    -webkit-animation-delay: calc(3s * 4);
-            animation-delay: calc(3s * 4);
-  }
-  
-  .carousel__item:nth-child(7) {
-    -webkit-animation-delay: calc(3s * 5);
-            animation-delay: calc(3s * 5);
-  }
-  
-  .carousel__item:nth-child(8) {
-    -webkit-animation-delay: calc(3s * 6);
-            animation-delay: calc(3s * 6);
-  }
-  
-  .carousel__item:last-child {
-    -webkit-animation-delay: calc(-3s * 2);
-            animation-delay: calc(-3s * 2);
-  }
-  
-  .carousel__item-body {
-    width: 50%;
-  }
-  
-  .title {
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-  @-webkit-keyframes carousel-animate-vertical {
-    0% {
-      transform: translateY(100%) scale(0.5);
-      opacity: 0;
-      visibility: hidden;
-    }
-    3%, 11.1111111111% {
-      transform: translateY(100%) scale(0.7);
-      opacity: 0;
-      visibility: visible;
-    }
-    14.1111111111%, 22.2222222222% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-      visibility: visible;
-    }
-    25.2222222222%, 33.3333333333% {
-      transform: translateY(-100%) scale(0.7);
-      opacity: 0;
-      visibility: visible;
-    }
-    36.3333333333% {
-      transform: translateY(-100%) scale(0.5);
-      opacity: 0;
-      visibility: visible;
-    }
-    100% {
-      transform: translateY(-100%) scale(0.5);
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  
-  @keyframes carousel-animate-vertical {
-    0% {
-      transform: translateY(100%) scale(0.5);
-      opacity: 0;
-      visibility: hidden;
-    }
-    3%, 11.1111111111% {
-      transform: translateY(100%) scale(0.7);
-      opacity: 0;
-      visibility: visible;
-    }
-    14.1111111111%, 22.2222222222% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-      visibility: visible;
-    }
-    25.2222222222%, 33.3333333333% {
-      transform: translateY(-100%) scale(0.7);
-      opacity: 0;
-      visibility: visible;
-    }
-    36.3333333333% {
-      transform: translateY(-100%) scale(0.5);
-      opacity: 0;
-      visibility: visible;
-    }
-    100% {
-      transform: translateY(-100%) scale(0.5);
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+nav {
+  background: #222;
+  padding: 0 15px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.menu,
+.submenu {   
+  list-style-type: none;
+}
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+.item {
+  padding: 10px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary { /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+ display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900; 
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
 
-  .content > aside {
-    background: beige;
-    flex: 1;
-    max-width: 50%;
-    object-fit: contain;
+/* Tablet menu */
+@media all and (min-width: 500px) {
+  .menu {
+      justify-content: center;
   }
+  .logo {
+      flex: 1;
+  }
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+  }
+  /* Button up from tablet screen */
+  .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+  }
+  .button a {
+      background: #0080ff;
+      border: 1px royalblue solid;
+  }
+  .button.secondary {
+      border: 0;
+  }
+  .button.secondary a {
+      background: transparent;
+      border: 1px #0080ff solid;  
+  }
+  .button a:hover {
+      text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+      background: royalblue;
+      border-color: darkblue;
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  .menu {
+      align-items: flex-start;     
+      flex-wrap: nowrap;
+      background: none;
+  }
+  .logo {
+      order: 0;
+  }
+  .item {
+      order: 1;
+      position: relative;
+      display: block; 
+      width: auto;
+  }
+  .button {
+      order: 2;
+  }
+  .submenu-active .submenu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 68px;
+      background: #111;
+  }
+  .toggle {
+      display: none;
+  }
+  .submenu-active {
+      border-radius: 0;
+  }
+}
