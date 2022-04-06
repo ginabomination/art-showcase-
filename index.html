@@ -1,191 +1,267 @@
-<!DOCTYPE html>
-<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<nav>
+    <ul class="menu">
+        <li class="logo"><a href="#">Creative Mind Agency</a></li>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item has-submenu">
+            <a tabindex="0">Services</a>
+            <ul class="submenu">
+                <li class="subitem"><a href="#">Design</a></li>
+                <li class="subitem"><a href="#">Development</a></li>
+                <li class="subitem"><a href="#">SEO</a></li>
+                <li class="subitem"><a href="#">Copywriting</a></li>
+            </ul>
+        </li>
+        <li class="item has-submenu">
+            <a tabindex="0">Plans</a>
+            <ul class="submenu">
+                <li class="subitem"><a href="#">Freelancer</a></li>
+                <li class="subitem"><a href="#">Startup</a></li>
+                <li class="subitem"><a href="#">Enterprise</a></li>
+            </ul>
+        </li>
+        <li class="item"><a href="#">Blog</a></li>
+        <li class="item"><a href="#">Contact</a>
+        </li>
+        <li class="item button"><a href="#">Log In</a></li>
+        <li class="item button secondary"><a href="#">Sign Up</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+</nav>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="main.css">
-  <script src = "m.js"></script>
+<style>
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+nav {
+    background: #222;
+    padding: 0 15px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.menu,
+.submenu {   
+    list-style-type: none;
+}
+.logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+.item {
+    padding: 10px;
+}
+.item.button {
+    padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+.menu li.subitem a {
+    padding: 15px;
+}
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.active .item {
+    display: block;
+}
+.button.secondary { /* divider between buttons and menu links */
+    border-bottom: 1px #444 solid;
+}
+/* Submenu up from mobile screens */
+.submenu {
+    display: none;
+}
+.submenu-active .submenu {
+   display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+.has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+}
+.subitem a {
+    padding: 10px 15px;
+}
+.submenu-active {
+    background-color: #111;
+    border-radius: 3px;
+}
 
-  <style>
-      
-    body {
-        font-family: "Lato", sans-serif;
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
     }
-    
-    .sidebar {
-        height: 100%;
-        width: 85px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-        white-space: nowrap;
+    .logo {
+        flex: 1;
     }
-    
-    .sidebar a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
+    .item.button {
+        width: auto;
+        order: 1;
         display: block;
-        transition: 0.3s;
     }
-    
-    .sidebar a:hover {
-        color: #f1f1f1;
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
     }
-    
-    .sidebar .closebtn {
+    /* Button up from tablet screen */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .button a {
+        background: #0080ff;
+        border: 1px royalblue solid;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button.secondary a {
+        background: transparent;
+        border: 1px #0080ff solid;  
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: royalblue;
+        border-color: darkblue;
+    }
+}
+/* Desktop menu */
+@media all and (min-width: 960px) {
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .submenu-active .submenu {
+        display: block;
         position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
+        left: 0;
+        top: 68px;
+        background: #111;
     }
-    
-    .material-icons,
-    .icon-text {
-        vertical-align: middle;
+    .toggle {
+        display: none;
     }
-    
-    .material-icons {
-        padding-bottom: 3px;
+    .submenu-active {
+        border-radius: 0;
     }
-    
-    #main {
-        transition: margin-left .5s;
-        padding: 16px;
-        margin-left: 100px;
-    }
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    
-    @media screen and (max-height: 450px) {
-        .sidebar {
-            padding-top: 15px;
-        }
-        .sidebar a {
-            font-size: 18px;
-        }
-    }
+}
 </style>
-</head>
-
-<body>
-
-<div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-  <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
-  <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
-  <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
-  <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
-  <a href="#"><span></span><i class="material-icons">filter_vintage</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Printmaking</span></a><br>
-  <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
-  <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Digital Prints</span></a><br>
-  <a href="#"><span></span><i class="material-icons">collections</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
-</div>
-
-<div id="main">
-  <body>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla at volutpat diam ut. Tincidunt id aliquet risus feugiat in ante metus dictum. Diam in arcu cursus euismod quis viverra nibh. Dictum sit amet justo donec enim diam vulputate ut pharetra. Ac odio tempor orci dapibus ultrices. Amet risus nullam eget felis eget. Id venenatis a condimentum vitae. Felis eget velit aliquet sagittis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Elementum eu facilisis sed odio morbi quis commodo odio. Molestie at elementum eu facilisis. Curabitur vitae nunc sed velit dignissim sodales. Tempus imperdiet nulla malesuada pellentesque. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Eu mi bibendum neque egestas congue quisque egestas diam in.
-
-        Odio morbi quis commodo odio aenean sed. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. In aliquam sem fringilla ut morbi tincidunt augue. Velit euismod in pellentesque massa placerat duis ultricies lacus. Dolor sit amet consectetur adipiscing elit ut. At auctor urna nunc id cursus metus. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Ut consequat semper viverra nam libero justo laoreet. Sit amet mauris commodo quis imperdiet massa tincidunt. Urna porttitor rhoncus dolor purus non enim praesent elementum.</p>
-        <aside>
-
-        <div class='carousel'>
-          
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-              <a href="http://www.google.com">
-                <img src="img 2.jpg" alt="">
-              </a>
-            </div>
-            </div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 3.jpg" alt="">
-                </a>
-              </div>
-            </div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 4.jpg" alt="">
-                </a>
-              </div>
-            </div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 1.jpg" alt="">
-                </a>
-              </div></div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 2.jpg" alt="">
-                </a>
-              </div></div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 2.jpg" alt="">
-                </a>
-              </div></div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 2.jpg" alt="">
-                </a>
-              </div></div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 2.jpg" alt="">
-                </a>
-              </div></div></div>
-
-            <div class='carousel__item'><div class='carousel__item-body'>
-              <div class="row"> 
-                <a href="http://www.google.com">
-                  <img src="img 2.jpg" alt="">
-                </a>
-              </div></div></div>
-
-        </div>  </aside> 
-    </div>   
-
-  </body>
-</div>
-
 <script>
-  var mini = true;
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+ 
+/* Toggle mobile menu */
+function toggleMenu() {
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+         
+        // adds the menu (hamburger) icon
+        toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
+    } else {
+        menu.classList.add("active");
+         
+        // adds the close (x) icon
+        toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
+    }
+}
+ 
+/* Event Listener */
+toggle.addEventListener("click", toggleMenu, false);
 
-  function toggleSidebar() {
-    if (mini) {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-      this.mini = false;
-    } 
 
-    else {
-      document.getElementById("mySidebar").style.width = "85px";
-      document.getElementById("main").style.marginLeft = "85px";
-      this.mini = true;
+
+const items = document.querySelectorAll(".item");
+ 
+/* Activate Submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
+ 
+/* Event Listeners */
+for (let item of items) {
+    if (item.querySelector(".submenu")) {
+      item.addEventListener("click", toggleItem, false);
+      item.addEventListener("keypress", toggleItem, false);
+    }   
+}
+
+/* Close Submenu From Anywhere */
+function closeSubmenu(e) {
+  if (menu.querySelector(".submenu-active")) {
+    let isClickInside = menu
+      .querySelector(".submenu-active")
+      .contains(e.target);
+ 
+    if (!isClickInside && menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
     }
   }
+}
+ 
+/* Event listener */
+document.addEventListener("click", closeSubmenu, false);
 </script>
-
-</body>
-</html>

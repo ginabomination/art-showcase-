@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="main.css">
+  <script src = "m.js"></script>
+
+  <style>
+      
+    body {
+        font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+        height: 100%;
+        width: 85px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+    
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    .material-icons,
+    .icon-text {
+        vertical-align: middle;
+    }
+    
+    .material-icons {
+        padding-bottom: 3px;
+    }
+    
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        margin-left: 100px;
+    }
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    
+    @media screen and (max-height: 450px) {
+        .sidebar {
+            padding-top: 15px;
+        }
+        .sidebar a {
+            font-size: 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+  <a href=index.html><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a><br>
+  <a href="#"><span></span><i class="material-icons">brush</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Canvas</span></a><br>
+  <a href="#"><span></span><i class="material-icons">edit</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Drawing</span></a><br>
+  <a href="#"><span></span><i class="material-icons">person</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Sculpture</span></a><br>
+  <a href="#"><span></span><i class="material-icons">filter_vintage</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Printmaking</span></a><br>
+  <a href="#"><span></span><i class="material-icons">photo_camera</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Photography</span></a><br>
+  <a href="#"><span></span><i class="material-icons">image</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Digital Prints</span></a><br>
+  <a href="#"><span></span><i class="material-icons">collections</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;NFT</span></a><br>
+</div>
+
+<div id="main">
+  <body>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla at volutpat diam ut. Tincidunt id aliquet risus feugiat in ante metus dictum. Diam in arcu cursus euismod quis viverra nibh. Dictum sit amet justo donec enim diam vulputate ut pharetra. Ac odio tempor orci dapibus ultrices. Amet risus nullam eget felis eget. Id venenatis a condimentum vitae. Felis eget velit aliquet sagittis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Elementum eu facilisis sed odio morbi quis commodo odio. Molestie at elementum eu facilisis. Curabitur vitae nunc sed velit dignissim sodales. Tempus imperdiet nulla malesuada pellentesque. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Eu mi bibendum neque egestas congue quisque egestas diam in.
+
+        Odio morbi quis commodo odio aenean sed. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. In aliquam sem fringilla ut morbi tincidunt augue. Velit euismod in pellentesque massa placerat duis ultricies lacus. Dolor sit amet consectetur adipiscing elit ut. At auctor urna nunc id cursus metus. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Ut consequat semper viverra nam libero justo laoreet. Sit amet mauris commodo quis imperdiet massa tincidunt. Urna porttitor rhoncus dolor purus non enim praesent elementum.</p>
+        <aside>
+
+        <div class='carousel'>
+          
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+              <a href="http://www.google.com">
+                <img src="img 2.jpg" alt="">
+              </a>
+            </div>
+            </div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 3.jpg" alt="">
+                </a>
+              </div>
+            </div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 4.jpg" alt="">
+                </a>
+              </div>
+            </div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 1.jpg" alt="">
+                </a>
+              </div></div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 2.jpg" alt="">
+                </a>
+              </div></div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 2.jpg" alt="">
+                </a>
+              </div></div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 2.jpg" alt="">
+                </a>
+              </div></div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 2.jpg" alt="">
+                </a>
+              </div></div></div>
+
+            <div class='carousel__item'><div class='carousel__item-body'>
+              <div class="row"> 
+                <a href="http://www.google.com">
+                  <img src="img 2.jpg" alt="">
+                </a>
+              </div></div></div>
+
+        </div>  </aside> 
+    </div>   
+
+  </body>
+</div>
+
+<script>
+  var mini = true;
+
+  function toggleSidebar() {
+    if (mini) {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      this.mini = false;
+    } 
+
+    else {
+      document.getElementById("mySidebar").style.width = "85px";
+      document.getElementById("main").style.marginLeft = "85px";
+      this.mini = true;
+    }
+  }
+</script>
+
+</body>
+</html>
